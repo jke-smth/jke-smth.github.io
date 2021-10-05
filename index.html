@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <style>
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: black;
+        color: whitesmoke;
+      }
+
+      section {
+        display: flex;
+      }
+
+      header {
+        padding-left: 10px;
+      }
+      nav {
+        padding-left: 10px;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      nav li {
+        padding-bottom: 20px;
+      }
+      nav a {
+        border: 2px;
+        border-style: solid;
+        border-color: white;
+        white-space: nowrap;
+        text-decoration: none;
+        padding: 5px;
+      }
+      nav a:link {
+        color: whitesmoke;
+      }
+      nav a:visited {
+        color: whitesmoke;
+      }
+      nav a:hover {
+      }
+      nav a:focus {
+      }
+      article{
+        padding-left: 20px;
+      }
+      article a{
+        color: whitesmoke;
+      }
+      article a:visited {
+        color: whitesmoke;
+      }
+      article img{
+        padding: 10px;
+      }
+
+    </style>
+
+    <title>Jacob Smith Portfolio</title>
+
+  </head>
+
+
+
+  <body>
+    <header>
+      <h1>Jacob<br>Smith
+
+    </header>
+    <section>
+      <nav>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="#game_of_life">Conway's Game of Life</a></li>
+        </ul>
+      </nav>
+      <article id="game_of_life">
+        <h4>Conway's Game of Life</h4>
+        <p>Implemented Conway's Game of Life as a terminal application which allows editing, saving, and loading of patterns.
+        <br>
+        <p>The game follows four basic rules:
+        <ul>
+          <li>1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+          <li>2. Any live cell with two or three live neighbors lives on to the next generation.</li>
+          <li>3. Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+          <li>4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+        </ul>
+
+        <p>You can download the game yourself from the <a href="https://github.com/jke-smth/life">repository.</a>
+        <br>
+        <p>I wrote this game to learn how to use the Python Curses and Numpy libraries for writing basic terminal applications.
+        <br>
+        <img src="Conway_Game_of_Life_as_presented_by_Jacob_Smith.png" alt="A screenshot of my implementation of Conway's Game of Life">
+      </article>
+    </section>
+
+  </body>
+
+</html>
