@@ -56,6 +56,7 @@
       nav a:focus {
       }
       article{
+        margin: 0 auto;
         padding-left: 20px;
       }
       article a{
@@ -64,8 +65,26 @@
       article a:visited {
         color: whitesmoke;
       }
-      article img{
+      article ul{
         padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      article li {
+
+        list-style-type: none;
+        height: 40vh;
+        flex-grow: 1;
+      }
+      article li:last-child {
+        flex-grow: 100;
+      }
+      article img{
+
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
       }
 
     </style>
@@ -93,18 +112,23 @@
         <p>Implemented Conway's Game of Life as a terminal application which allows editing, saving, and loading of patterns.
         <br>
         <p>The game follows four basic rules:
-        <ul>
-          <li>1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
-          <li>2. Any live cell with two or three live neighbors lives on to the next generation.</li>
-          <li>3. Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
-          <li>4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
-        </ul>
 
-        <p>You can download the game yourself from the <a href="https://github.com/jke-smth/life">repository.</a>
+        <br>1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
+        <br>2. Any live cell with two or three live neighbors lives on to the next generation.
+        <br>3. Any live cell with more than three live neighbors dies, as if by overpopulation.
+        <br>4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+
+
+        <p>You can download the game yourself from the <a href="https://github.com/jke-smth/life">repository</a>.
         <br>
         <p>I wrote this game to learn how to use the Python Curses and Numpy libraries for writing basic terminal applications.
         <br>
-        <img src="Conway_Game_of_Life_as_presented_by_Jacob_Smith.png" alt="A screenshot of my implementation of Conway's Game of Life">
+        <ul>
+          <li>
+            <img src="Conway_Game_of_Life_as_presented_by_Jacob_Smith.png" alt="A screenshot of my implementation of Conway's Game of Life">
+          </li>
+          <li></li>
+        </ul>
       </article>
     </section>
 
