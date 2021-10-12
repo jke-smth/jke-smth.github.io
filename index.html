@@ -65,17 +65,10 @@
       article a:visited {
         color: whitesmoke;
       }
-      article ul{
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
+      article p{
+        max-width: 610px;
       }
-      article li {
 
-        list-style-type: none;
-        height: 40vh;
-        flex-grow: 1;
-      }
       code {
         font-family: Consolas,"courier new";
         color: crimson;
@@ -83,16 +76,7 @@
         padding: 2px;
         font-size: 105%;
       }
-      article li:last-child {
-        flex-grow: 100;
-      }
-      article img{
 
-        max-height: 100%;
-        min-width: 100%;
-        object-fit: cover;
-        vertical-align: bottom;
-      }
 
     </style>
 
@@ -118,26 +102,42 @@
         <h4>Conway's Game of Life</h4>
         <p>Implemented Conway's Game of Life as a terminal application which allows editing, saving, and loading of patterns.
         <br>
-        <p>The game follows four basic rules:
+        <p>Conway's game follows four basic rules:
 
         <br>1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
         <br>2. Any live cell with two or three live neighbors lives on to the next generation.
         <br>3. Any live cell with more than three live neighbors dies, as if by overpopulation.
         <br>4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+        <br>
+        <p>Conway invented the Game of Life as a thought experiment to demonstrate how complex systems can arise from simple rules. The behavior of the “cells” is complex, with many various mechanisms that emerge from only four rules. You can see below in the examples that there are many different patterns that emerge:
 
+
+        <br>
+
+        <br>
+
+        <img src="gameoflife_1.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
+
+        <img src="gameoflife_2.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
+
+        <br>
+        <p>A common pattern that emerges is a "Blinker", when three cells are in a row with no others nearby, they form a stable oscillating pattern. Other oscillating patterns can be found, such as the "Toad" which is larger and made of six cells in two rows, offset by one.
+        <br>
+        <img src="blinker.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
+
+        <img src="toad.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
+
+        <br>
+        <p>Many more patterns can be found within the game. I enjoy making random games and watching the different mechanisms interact.
+        <br>
+        <br>
+        <img src="gameoflife_big.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
+        <br>
+        <p>However there is an issue in my code which arises when the size of the game is set to values greater than 300 by 300: due to the computation which is performed to update the array from one state to the next the program begins to lag considerably. The above game, which is 600 by 600, took about half an hour to generate.
+        <p>The issue is that the rules need to be applied for every cell in the array. My program is written in Python, which while it is a wonderful language for rapid development, it has some performance issues. Compiled languages such as C and Golang are much faster. I estimate that the Golang version of the program is about 100x as fast. However unlike Python, Golang lacks a array manipulation library as robust and well documented as Numpy.
+        <p>I still intend to write a Golang version of the program, but that will take some time as I'm new to the language and the Numpy equivalent I found (<a href="https://github.com/gonum/gonum">Gonum</a>) is not as extensively documented.
 
         <p>You can download the game yourself from the <a href="https://github.com/jke-smth/life">repository</a>.
-        <br>
-        <p>I wrote this first version to learn how to use the Python Curses and Numpy libraries for writing basic terminal applications.
-        <br>
-        <ul>
-          <li>
-            <img src="gameoflife.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
-          </li>
-          <li></li>
-        </ul>
-        <br>
-      
       </article>
     </section>
 
