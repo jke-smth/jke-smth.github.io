@@ -133,10 +133,7 @@
         <br>
         <img src="gameoflife_big.gif" alt="An animated gif generated using my implementation of Conway's Game of Life">
         <br>
-        <p>However there is an issue in my code which arises when the size of the game is set to values greater than 300 by 300: due to the computation which is performed to update the array from one state to the next the program begins to lag considerably. The above game, which is 600 by 600, took about half an hour to generate.
-        <p>The issue is that the rules need to be applied for every cell in the array. My program is written in Python, which while it is a wonderful language for rapid development, it has some performance issues. Compiled languages such as C and Golang are much faster. I estimate that the Golang version of the program is about 100x as fast. However unlike Python, Golang lacks a array manipulation library as robust and well documented as Numpy.
-        <p>I still intend to write a Golang version of the program, but that will take some time as I'm new to the language and the Numpy equivalent I found (<a href="https://github.com/gonum/gonum">Gonum</a>) is not as extensively documented.
-
+        
         <p>You can download the game yourself from the <a href="https://github.com/jke-smth/life">repository</a>.
       </article>
     </section>
