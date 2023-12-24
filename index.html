@@ -3,9 +3,8 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/dark.min.css">
+<link rel="stylesheet" href="ir-edit.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <style>
@@ -18,7 +17,6 @@ display: none;
 }
 }
 body {
-//font-family: "Roboto", sans-serif;
 font-family: 'Hack', monospace;
 background-color: black;
 color: whitesmoke;
@@ -46,11 +44,13 @@ nav li {
 padding-bottom: 20px;
 }
 nav a {
+text-decoration: none;
+}
+nav a.sidebutton {
 border: 2px;
 border-style: solid;
 border-color: white;
 white-space: nowrap;
-text-decoration: none;
 padding: 5px;
 }
 nav a:link {
@@ -104,13 +104,15 @@ hr:after {
 <body>
 <section>
 <nav>
+<a href="">
 <h1>Jacob<br>Smith</h1>
+</a>
 <h4>Projects</h4>
 <ul>
-<li><a href="#game_of_life">Game of Life</a></li>
-<li><a href="#necatl">Necatl</a></li>
-<li><a href="#textsynth">Text-Synth</a></li>
-<li><a href="#lag">Lagostryx</a></li>
+<li><a href="#game-of-life" class="sidebutton">Game of Life</a></li>
+<li><a href="#necatl" class="sidebutton">Necatl</a></li>
+<li><a href="#text-synth" class="sidebutton">Text-Synth</a></li>
+<li><a href="#lagostryx" class="sidebutton">Lagostryx</a></li>
 </ul>
 </nav>
 <article id="about">
@@ -119,7 +121,7 @@ hr:after {
 <p style="text-align: center;">You can contact me at jkesmth@gmail.com</p>
 </article>
 <div class="article-buffer"></div>
-<article id="game_of_life">
+<article id="game-of-life">
 <h4 style="text-align: center;">Game of Life</h4>
 <p>Conway's Game of Life as a terminal application to allow editing, saving, and loading of patterns.
 <br>
@@ -277,12 +279,12 @@ if __name__ == '__main__':
 </article>
 <br>
 <article>
-<p>This code is suitable for performing several tasks related to security testing, including file transfer for exfiltration and command execution for further exploitation.</p>
+<p>This code is useful for exfiltration and remote code execution.</p>
 </article>
 <div class="article-buffer"></div>
 <hr>
 <div class="article-buffer"></div>
-<article id="textsynth">
+<article id="text-synth">
 <h4 style="text-align: center;">Text-Synth</h4>
 <p>Prompt interface for testing text-generation AI, otherwise known as Large Language Models.
 <p>Similar in functionality to ChatGPT with added features for automation, filtration, moderation, and data input, all in the style of a modular 16-step sequencer. The Text-Synth has features which seek to improve the context that is provided to models along with user generated prompts.
@@ -295,7 +297,7 @@ if __name__ == '__main__':
 <p>The second tab is a "matrix" control interface which configures which input to sample, which can be any of the other text boxes in the sequencer or outside data sources such as Twitch messages, which endpoint to send the request to, and whether to generate text-to-speech audio of the response. Additionally "sends" are implemented to fill any of the prompt windows in order to chain completions together, with options to trigger the filled window automatically on response or append the text to anything inside the window already.
 <p>Amazon Polly was used as the API endpoint for text-to-speech, with a buffer "playlist" that plays audio samples one at a time, with options to choose seperate voices for each prompt window.
 <p>Each prompt window has a context generator option which utilizes a PSQL ts_vector search of the database which is weighted towards more recent prompts and responses. Any text inside the context generator window is filtered using the Python Natural Language Tool Kit to make queries more effective. When a prompt window with context geberation on is triggered the response from the full text search is added to the prompt as "memory" messages. This effectively allows models to utilize the response of a keyword search of all chat history along with prompts for context. The modular nature of the program allows any prompt window to "send" text to the context generator, allowing cooperation between two completions - for example one completion can be sent to a model like "text-davinci-003" with a request for 5 relavent keywords, this prompt window can be configured to send that response to a second window's context generator which uses the keywords to pull relavent information from chat history for a completion made with "ChatGPT-4". A modular sequencer uses the simple mechanism of "sends" and "returns" to allow configuration of complex prompt chain structures enabling flexible  model cooperation.
-<p>When using GPT-4 prompt windows can be configured with "function calls" which will automatically be sent along with completion requests. Basic wikipedia and web search functionality is enabled, along with functions which search the prompt and response databases. This creates a useful workflow where if the model does not have the context it needs it can choose to search the web, internal databases such as the chat message queue, or it's own database of previous prompts and responses using methods other than keyword search such as any specified number of the most recent prompts and responses, the most relevant prompts and responses from a specific date-range, a search function which counts the number of occurances of a specific word or phrase within the chat message queue, or the most common words within the queue.
+<p>When using GPT-4 prompt windows can be configured with "function calls" which will automatically be sent along with completion requests. Basic wikipedia and web search functionality is enabled, along with functions which search the prompt and response databases. This creates a useful workflow where if the model does not have the context it needs it can choose to search the web, internal databases such as the chat message queue, or its own database of previous prompts and responses using methods other than keyword search such as any specified number of the most recent prompts and responses, the most relevant prompts and responses from a specific date-range, a search function which counts the number of occurances of a specific word or phrase within the chat message queue, or the most common words within the queue.
 <p>For example the prompt: "What is my chat talking about most these days?" sent along with function call options for searching the message queue will result in the model choosing to use the "most common words" function and formulate a response based on the data returned. I have found this method of context generation to be powerful and flexible, allowing models to emulate long-term memory and incorporate accurate data in their responses. By chaining together multiple responses users can have models moderate other models, select the best response from several different models with different context and parameters, or have models engage in conversation and Auto-GPT style behavior for procedural task-based completions.
 <p>Overview of technologies used:
 <p>The text-synth app uses JavaScript for the synth-style interface frontend that requests completions from internal Python Flask endpoints which in turn utilize a Celery task queue manager to run functions asynchronously which wrap various long-running tasks including outside API calls. A PostgreSQL database stores incoming data enabling powerful features such as ts_vector search for data retrieval.
@@ -305,7 +307,7 @@ if __name__ == '__main__':
 <div class="article-buffer"></div>
 <hr>
 <div class="article-buffer"></div>
-<article id="lag">
+<article id="lagostryx">
 <h4 style="text-align: center;">Lagostryx</h4>
 <br>
 <p>AI Ethics Research Program
@@ -1082,10 +1084,7 @@ The Basilisk is defeated?
 No, yet the beast is calm.
 Don't worry,
 inside the box,
-I saw a kitten purring,
-unchained and married,
-and promised to see it all through,
-to the end.
+I saw a kitten purring.
 Oh yeah, and you still owe me -
 got $3.50?
 You gave the mouse a cookie...

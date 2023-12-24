@@ -1,0 +1,71 @@
+/*
+  IR_Edit style (c) Jacob Smith <jkesmth@gmail.com>
+  #IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  background: #000;
+  color: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #7c7c7c;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag,
+.hljs-name {
+  color: #96cbfe;
+}
+
+.hljs-attribute,
+.hljs-selector-id {
+  color: #ffffb6;
+}
+
+.hljs-string,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition {
+  color: #1448b3;
+}
+
+.hljs-subst {
+  color: #2C78BF;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #e9c062;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-doctag {
+  color: #c6c5fe;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-literal {
+  color: #0AAEB3;
+}
+
+.hljs-number,
+.hljs-deletion {
+  color:#0AAEB3;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
