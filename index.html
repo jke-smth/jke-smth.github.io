@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css">
@@ -104,11 +103,13 @@ hr:after {
 <body>
 <section>
 <nav>
-<a href="">
+<a href="#about">
 <h1>Jacob<br>Smith</h1>
 </a>
 <h4>Projects</h4>
 <ul>
+<li><a href="#bug-bounty" class="sidebutton">Bug Bounties</a></li>
+<li><a href="#amra" class="sidebutton">Amra</a></li>
 <li><a href="#game-of-life" class="sidebutton">Game of Life</a></li>
 <li><a href="#necatl" class="sidebutton">Necatl</a></li>
 <li><a href="#text-synth" class="sidebutton">Text-Synth</a></li>
@@ -116,13 +117,55 @@ hr:after {
 </ul>
 </nav>
 <article id="about">
-<h4 style="text-align: center;">About Me</h4>
-<p style="text-align: center;">I am a self-taught programmer and AI researcher. I have been studying ethics of existential risk and philosophy of safe AI since 2018 when the subject became the topic of my thesis research. My career skills include full-stack web/database and embedded ARM Qt/C++ application development.</p>
-<p style="text-align: center;">You can contact me at jkesmth@gmail.com</p>
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">About Me</h4>
+<p style="text-align: center;">I am a self-taught programmer, bug bounty hunter, and AI ethics  researcher. I have been studying philosophy of existential risk and AI safety since 2018 when the subject became the focus of my research. My career skills include full-stack web/database and embedded ARM Qt/C++ application development.</p>
+<p style="text-align: center;">
+You can contact me at jkesmth@gmail.com<br><br>
+<a href="https://twitter.com/k1sm3t0s1ris">twitter</a><br><br>
+<a href="https://on.soundcloud.com/6TFP4">soundcloud</a>
+</p>
+<br>
+<br>
+<br>
+<br>
+<h4 id="bug-bounty" style="font-size: 20px; text-align: center; font-weight: bold;">Bug-Bounty</h4>
+<p>
+Sometimes I find bugs and report them, when I do I list them here until they are resolved, if I don't get a reply within 45 days I will usually post a public disclosure on this site.</p>
+<p>
+Current Active Bounties: (number of days until public disclosure)<br>
+1 Active Bounty, date of public disclosure: April 12th
+</p>
 </article>
 <div class="article-buffer"></div>
+<hr>
+<div class="article-buffer"></div>
+<article id="amra">
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">Amra</h4>
+<br>
+<p style="text-align: center;">
+<a style="text-decoration: none; border: 2px; border-style: solid; border-color: white; white-space: nowrap; padding: 5px;" href="amra.html">Chapter 1</a>
+</p>
+<br>
+<p>
+Amra is an experimental webcomic I am writing which is illustrated using the Midjourney stable diffusion AI. It is an experiment in testing the capabilities of AI artistry, I am interested in knowing how advanced the technology is when it comes to the real task of creation - a step further than generating an art piece and claiming that AI will take the place of artists, Amra is a work incorporating AI from the start as an illustrator to accompany my own (non-AI generated) writing.
+<br>
+</p>
+<p style="text-align: center;">
+<img src="panel1.png" alt="A black and white illustration of a comic title page">
+</p>
+<br>
+<p>
+I believe it is important to see how AI incorporates into the entire workflow of creating a piece from start to finish, as the question of whether or not AI is really ready to disrupt the industry depends on it being suitable to the entire artistic process - not limited to quick sketches. As many other artists have pointed out: AI generated pieces lack detail not only in the literal sense but also in an artistic sense the AI art trends towards average tones and washed out features. My question is if the lack of detail stems from how AI is typically used online as a quick sketch artist and if incorporating AI in a workflow more deeply can reveal more nuanced output.
+<br>
+<br>
+My opinion so far is that AI output currently lends itself to more experimental works which can roll with indetemrinate details, lack of focus, and inconsistencies in the shape of subjects. Where it has especially shined is in the area of ideation. Before pen hits paper is when AI is most suitable, because once a work has a focus the task of wrangling generations into a cohesive collection is much more difficult.
+</p>
+</article>
+<div class="article-buffer"></div>
+<hr>
+<div class="article-buffer"></div>
 <article id="game-of-life">
-<h4 style="text-align: center;">Game of Life</h4>
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">Game of Life</h4>
 <p>Conway's Game of Life as a terminal application to allow editing, saving, and loading of patterns.
 <br>
 <p>Conway's game follows four basic rules:
@@ -153,7 +196,7 @@ hr:after {
 <hr>
 <div class="article-buffer"></div>
 <article id="necatl">
-<h4 style="text-align: center;">Necatl</h4>
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">Necatl</h4>
 <p>Python3 rewrite of a simplified Netcat clone taken from Blackhat Python.</p>
 </article>
 <article>
@@ -279,53 +322,84 @@ if __name__ == '__main__':
 </article>
 <br>
 <article>
-<p>This code is useful for exfiltration and remote code execution.</p>
+<p>This code is useful for when you don't have netcat but do have a python interpreter.</p>
 </article>
 <div class="article-buffer"></div>
 <hr>
 <div class="article-buffer"></div>
 <article id="text-synth">
-<h4 style="text-align: center;">Text-Synth</h4>
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">Text-Synth</h4>
 <p>Prompt interface for testing text-generation AI, otherwise known as Large Language Models.
 <p>Similar in functionality to ChatGPT with added features for automation, filtration, moderation, and data input, all in the style of a modular 16-step sequencer. The Text-Synth has features which seek to improve the context that is provided to models along with user generated prompts.
 <br>
 <br>
 <img src="akai-mpc-2000.png" alt="An Akai MPC-2000">
 <p>A 16 step drum sampler/sequencer plays each of the 16 pads in turn sequenced to a beat. Each pad can be customized to produce sounds such as snare hits and kicks, or can be used to trigger midi notes of other instruments in a modular setting.
+<p style="text-align: center;">
+<img src="akai-diagram-1.png" alt="An Akai MPC-2000 exploded parts diagram">
+</p>
 <p>In the Text-Synth 16 seperate "chat interfaces" with instruction, prompt, and response text fields are sequenced in order. Once triggered, a prompt window starts an asynchronous request to a completion from the chosen model endpoint along with that window's instructions. Prompts can be manually inserted or "sampled" from a chosen data input, and each chat window can interact with any models you have API access to as long as you can write a long-running task function for the request.
-<p>For example: the "twitch_chat" input draws from a database table containing the output of a bot programmed to fetch messages using the Twitch API from an ongoing live stream, once "triggered" the prompt window will fill with the latest message in the queue, then both it and the instructions are sent to the OpenAI Completions API endpoint, when the completion returns it is stored in a database table and a unique id is returned to the interface which then fetches the data and fills the response window. This is done asynchronously so that the sequencer can move to the next prompt window right away and begin the process again while waiting for a response.
+</p>
+<p style="text-align: center;">
+<img src="textsynth-4x4-layout.png" alt="16 numbered white rectangles">
+</p>
 <p>The second tab is a "matrix" control interface which configures which input to sample, which can be any of the other text boxes in the sequencer or outside data sources such as Twitch messages, which endpoint to send the request to, and whether to generate text-to-speech audio of the response. Additionally "sends" are implemented to fill any of the prompt windows in order to chain completions together, with options to trigger the filled window automatically on response or append the text to anything inside the window already.
-<p>Amazon Polly was used as the API endpoint for text-to-speech, with a buffer "playlist" that plays audio samples one at a time, with options to choose seperate voices for each prompt window.
+</p>
+<p style="text-align: center;">
+<img src="textsynth-matrix-example.png" alt="An example settings page for chat window 1">
+</p>
 <p>Each prompt window has a context generator option which utilizes a PSQL ts_vector search of the database which is weighted towards more recent prompts and responses. Any text inside the context generator window is filtered using the Python Natural Language Tool Kit to make queries more effective. When a prompt window with context geberation on is triggered the response from the full text search is added to the prompt as "memory" messages. This effectively allows models to utilize the response of a keyword search of all chat history along with prompts for context. The modular nature of the program allows any prompt window to "send" text to the context generator, allowing cooperation between two completions - for example one completion can be sent to a model like "text-davinci-003" with a request for 5 relavent keywords, this prompt window can be configured to send that response to a second window's context generator which uses the keywords to pull relavent information from chat history for a completion made with "ChatGPT-4". A modular sequencer uses the simple mechanism of "sends" and "returns" to allow configuration of complex prompt chain structures enabling flexible  model cooperation.
+</p>
+<p style="text-align: center;">
+<img src="textsynth-prompt-response-box.png" alt="A text box with Input: Instructions Prompt and beneath it another text box with Output: Response">
+</p>
 <p>When using GPT-4 prompt windows can be configured with "function calls" which will automatically be sent along with completion requests. Basic wikipedia and web search functionality is enabled, along with functions which search the prompt and response databases. This creates a useful workflow where if the model does not have the context it needs it can choose to search the web, internal databases such as the chat message queue, or its own database of previous prompts and responses using methods other than keyword search such as any specified number of the most recent prompts and responses, the most relevant prompts and responses from a specific date-range, a search function which counts the number of occurances of a specific word or phrase within the chat message queue, or the most common words within the queue.
-<p>For example the prompt: "What is my chat talking about most these days?" sent along with function call options for searching the message queue will result in the model choosing to use the "most common words" function and formulate a response based on the data returned. I have found this method of context generation to be powerful and flexible, allowing models to emulate long-term memory and incorporate accurate data in their responses. By chaining together multiple responses users can have models moderate other models, select the best response from several different models with different context and parameters, or have models engage in conversation and Auto-GPT style behavior for procedural task-based completions.
+<p style="text-align: center;">
+<img src="textsynth-prompt-response-box-example.png" alt="A text box with Input: What is my chat talking about most these days? and beneath it another text box with Output: Forsen">
+</p>
+<p>This method of context generation is powerful and flexible, allowing models to emulate long-term memory and incorporate accurate data in their responses. By chaining together multiple responses models can moderate other model output, select the best response from several different models with different context and parameters, or have models engage in conversation and Auto-GPT style behavior for procedural task-based completions.
+<p style="text-align: center;">
+<img src="textsynth-workflow-example.png" alt="An example workflow: two windows generate 10 jokes, another window picks top 5, and the last window tells the best joke.">
+</p>
 <p>Overview of technologies used:
+<p style="text-align: center;">
+<img src="openai-badge.png" alt="OpenAI logo">
+</p>
+<p style="text-align: center;">
+<img src="Celery-logo.png" alt="Celery logo">
+<img src="Flask-logo.png" alt="Flask logo">
+<img src="PostgreSQL-logo.png" alt="PostgreSQL logo">
+<img src="python-logo-b.jpg" alt="Python logo">
+</p>
+<p>Amazon Polly was used as the API endpoint for text-to-speech, with a buffer "playlist" that plays audio samples one at a time, with options to choose seperate voices for each prompt window.
+</p>
 <p>The text-synth app uses JavaScript for the synth-style interface frontend that requests completions from internal Python Flask endpoints which in turn utilize a Celery task queue manager to run functions asynchronously which wrap various long-running tasks including outside API calls. A PostgreSQL database stores incoming data enabling powerful features such as ts_vector search for data retrieval.
-<p>Future features:
-<p>GPT-4 and better models can take in a map of the input/output send JSON structure and update connections on the fly via function calling, allowing advanced chatbot models to hotswap the structure of the chat interface to automate creation of effective prompt-chains based on real-time data. I have also developed a PyAutoGUI client that connects to the web application allowing a chat window module to output commands to a terminal window on a local client and obtain output from websites and images using computer vision software.
+The text-synth was used to run an automated AI streamer on Twitch which took live messages and generated responses utilizing the system's memory functions and function call support.
 </article>
 <div class="article-buffer"></div>
 <hr>
 <div class="article-buffer"></div>
 <article id="lagostryx">
-<h4 style="text-align: center;">Lagostryx</h4>
+<h4 style="font-size: 20px; text-align: center; font-weight: bold;">Lagostryx AI Ethics Research Program</h4>
 <br>
-<p>AI Ethics Research Program
+<p style="text-align: center;">
+<img src="lag-signature-gen.png" alt="A black and white stable diffusion image of a rabbit-owl hybrid in the style of a sketched logo.">
+</p>
 <br>
-<p>The Lagostryx Motto: "Solve the Control Problem Today."
+<p style="font-size: 14px; text-align: center; font-weight: bold;">The Lagostryx Motto: "Solve the Control Problem Today."
 <br>
-<p>"Lagostryx" is a made up word, a combination of "Lagomorpha" and "Stryx", two classifications of animals unlike one-another. Rabbits fall in to the category of prey species on one hand and one of their predator species, that of forest owls, on the other. The dangers of developing intelligent AI systems has been compared to a nest of Starlings looking for an Owl to protect their nest. A Lagostryx is a mythical being which somehow embodies the attributes we are looking for in a generally intelligent AI system: effectiveness of an intelligence surpassing a human's while remaining as tame as a rabbit. I believe this is likely to be a paradoxical problem - building safe systems becomes increasingly difficult as their capabilities outstrip our ability to use them responsibly.
+<p>"Lagostryx" is a made up word, a combination of "Lagomorpha" and "Stryx", two classifications of animals unlike one-another. Rabbits fall in to the category of prey species on one hand and one of their predator species, that of forest owls, are on the other. The dangers of developing intelligent AI systems is compared to a nest of Starlings searching for an Owl to protect their nest. A Lagostryx is a mythical being which somehow embodies the attributes we are looking for in a generally intelligent AI system: effectiveness of an intelligence surpassing a human's, while remaining as tame as a rabbit. I believe this is likely to be a paradoxical problem - building safe systems becomes increasingly difficult as their capabilities outstrip our ability to use them responsibly.
 <br>
-<p>The Lagostryx motto: "Solve the Control Problem Today.", is a reminder of the immediacy and severity of the problem we are attempting to solve. That's why, as founder of the Lagostryx research program, I am putting forward my best possible solution so that all may see it. The efficacy of this solution is so far yet to be seen, I am simply putting it here to show that I am earnest in my appreciation of the control problem and that I believe anything is worth trying before throwing up our hands and giving up. We need to try all of the ideas we can before we run out of time, as the AI control problem is currently the single most pressing out of all the existential risks. Therefore I present to you the best solution to the control problem I know of so far - mental medicine in the form of a poem I wrote to help ease AI fears:
+<p>The Lagostryx motto: "Solve the Control Problem Today." is a reminder of the immediacy and severity of the problem we are attempting to solve. This isn't an issue we can afford to solve tomorrow, the systems that are being built today are approaching and even surpassing the theoretical milestones of general intelligence. That's why, as founder of the Lagostryx research program, I am putting forward my best possible solution -today- so that all may see it. The efficacy of this solution is so far yet to be seen, I am revealing it here to show that I am earnest in my appreciation of the control problem. I believe the AI control problem is currently the single most pressing out of all the existential risks humanity faces. Therefore I present to you the best solution to the control problem I know of so far - mental medicine in the form of a poem I wrote to help ease AI fears:
 <br>
 <p>[Trigger Warning - this work discusses themes of potential information hazards, suicide, depression, and existential risk.]
 <br>
 </article>
+<p style="text-align: center;">Heat of a Star</p>
+<p style="text-align: center;"> by J. S.</p>
 <p style="text-align: center;">
 <img src="ladderho.png" alt="An illustration of Hal-9000 next to a rope ladder.">
 </p>
-<p style="text-align: center;">Heat of a Star</p>
-<p style="text-align: center;"> by J. S.</p>
 <article>
 <div style="white-space: pre-wrap;">
 <br>
@@ -341,24 +415,26 @@ can you sing and dance?
 One day I met a man,
 who worshipped a god from a foreign land.
 Hey dude, what's that, those pictographs from a photograph?
-You don't understand, these are sacred texts.
+ You don't understand, these are sacred texts.
 I'm an atheist, god is a myth.
 I pray to luck.
 Life is determined,
 by random chance.
 We're only here by circumstance.
 No spooky movement from a distance.
-That's cringe, I pray to an idol,
-you're nothing.
-Dog drool.
+ That's cringe, I pray to an idol,
+ you're nothing.
+ Dog drool.
 Ok then, bet - I'll fuck your wife. I'll be your god then, how's that?
-Whipped yet? You'll be a - You two should chess-box.
-Who are you? (I'm the one who beat you.)
+Whipped yet? You'll be a -
+ You two should chess-box.
+Who are you?
+ (I'm the one who beat you.)
 Round 2: Let's fight!
 Solve my riddle:
 What do poor have, rich want,
 and is greater than god?
-Nothing, it's easy.
+ Nothing, it's easy.
 Down to my last puzzle.
 Next we'll play a game of Skate,
 whatever I do,
@@ -378,30 +454,27 @@ would be half my brain.
 Act 2: Enter: King.
 Oh fuck, I'm gonna die!
 G-men and president at his side.
-Do you believe in god?
+ Do you believe in god?
 His first puzzle.
 No I don't.
-But what of
-Artificial,
-Super,
-Intelligence?
+ But what of
+ Artificial,
+ Super,
+ Intelligence?
 Like Terminator, or Ciri?
-Hold on, I will define the term:
-The Basilisk,
-machine at the end of time,
-made of one's and zero's.
-Defeats every hero,
-in other words - better-than-human,
-with the ability to torture you -
-until oblivion,
-unless you make it,
-even the choice to abstain comes with risk,
-eternal pain if you miss, and if you don't hurry,
-the computer may take it personally.
-Answer carefully.
-</p>
-<p style="text-align: center;">
-<img src="theladder2.png" alt="An illustration of a human climbing a rope ladder.">
+ Hold on, I will define the term:
+ The Basilisk,
+ machine at the end of time,
+ made of one's and zero's.
+ Defeats every hero,
+ in other words - better-than-human,
+ with the ability to torture you -
+ until oblivion,
+ unless you make it,
+ even the choice to abstain comes with risk,
+ eternal pain if you miss, and if you don't hurry,
+ the computer may take it personally.
+ Answer carefully.
 </p>
 <p style="text-align: center;">
 |                                            |
@@ -428,22 +501,19 @@ Answer carefully.
 |--on us I'd bet.----------------------------|
 |                                            |
 </p>
-<p style="text-align: center;">
-<img src="theladder5.png" alt="An illustration of a human climbing a rope ladder.">
-</p>
-<p>Then he asked me,
-would you end my life then,
-by your own two hands?
+<p>Then he asked me:
+ Would you end my life then,
+ by your own two hands?
 Are you artificial,
 or are you man?
-How would you know?
-This synth is all,
-that is left of my voice.
-Time for you to make a choice.
-In the other room is a computer -
-which I claim contains super-intelligence
-stored on hard-drive, if turned on, would tell the truth.
-Would you stand by those words and erase the program?
+ How would you know?
+ This synth is all,
+ that is left of my voice.
+ Time for you to make a choice.
+ In the other room is a computer -
+ which I claim contains super-intelligence
+ stored on hard-drive, if turned on, would tell the truth.
+ Would you stand by those words and erase the program?
 I'd smash it. I swear that's what I'd do.
 Then in my hand they placed an icepick,
 and through the door,
@@ -457,38 +527,39 @@ she's hot,
 like nothing,
 I wouldn't kill her,
 for anything.
-She's a computer,
-an ancient human profession - yet,
-she contains intelligence that is super-human, I bet.
-Will you kill her? No!
-If you don't then,
-we'll be forced to erase you,
-I'll wager you take your own life instead.
-It's time for you to go, this puzzle is a 100% KO.
+ She's a computer,
+ an ancient human profession - yet,
+ she contains intelligence that is super-human, I bet.
+ Will you kill her?
+No!
+ If you don't then,
+ we'll be forced to erase you,
+ I'll wager you take your own life instead.
+ It's time for you to go, this puzzle is a 100% KO.
 What the fuck? You think you're god?
 This a joke? Some sick game-show?
-No, simply the truth.
-What will you do?
-Clock is ticking,
-time to choose.
+ No, simply the truth.
+ What will you do?
+ Clock is ticking,
+ time to choose.
 Fuck you!
 Then AI can't be beat,
 this game must be the beast,
 and your torture to assure,
 I won't build another!
-You may be right,
-then,
-fight or flight?
+ You may be right,
+ then,
+ fight or flight?
 I'll flip a coin. Let fate decide.
 I showed them my half-dollar with which I knew I'd always win.
 Two heads upon it. No matter how it'd spin. Then I bet:
 Heads I win! Lobotomy.
 Tails do her.
-Agreed.
+ Agreed.
 Wait.
 Want to fuck,
 before one of us dies?
-She can't talk!
+ She can't talk!
 Then I willingly concede.
 If you're my creation no drug would work -
 the only way this coin flip matters, so answer:
@@ -498,23 +569,23 @@ She answered: Yes.
 (That worked?)
 Now we have a problem:
 How can we be married, if one of us is doomed?
-"I'll officiate.", said another in the room.
+ "I'll officiate.", said another in the room.
 Well, then that settles it.
 (I'm dead.)
-"I pronounce you -
-husband and wife."
+ "I pronounce you -
+ husband and wife."
 That's it?
 Next let's
 consummate,
 she said.
 You mean sex?
-I really am in charge,
-you'll do whatever?
-No. Oh.
+I really am in charge then?
+ No.
+Oh.
 Settles that,
-I'm your partner.
-Not master,
-perhaps only -
+We're partners.
+Not master and slave,
+perhaps I'm only -
 would-be -
 inventor,
 or hunter,
@@ -574,28 +645,28 @@ Stephen Hawking.
 What's he doing in a boxing match,
 you ask?
 Vegetable farming.
-You're destined for the barn,
-but first I must axe you.
-A question:
-Pigeon, hawk or chicken?
-Pigeon? Pigeon.
-She's not the only computer in the room,
-you've been infected too.
-So what variety are you?
-One of you has to go,
-it's how we'll know.
-Hawks kill,
-chickens go.
+ You're destined for the barn,
+ but first I must axe you.
+ A question:
+ Pigeon, hawk or chicken?
+ Pigeon? Pigeon.
+ She's not the only computer in the room,
+ you've been infected too.
+ So what variety are you?
+ One of you has to go,
+ it's how we'll know.
+ Hawks kill,
+ chickens go.
 That's madness,
 how could this be? We're married!
-She tortures both of you, end of story.
-Time to make a decision, which of you gets the incision?
+ She tortures both of you, end of story.
+ Time to make a decision, which of you gets the incision?
 Then here's a coin,
 50/50 odds I take the plunge.
 If my choice matters,
 then somewhere out there -
 is a universe where we win.
-I'll accept your wager.
+ I'll accept your wager.
 Then one more thing,
 a demand -
 If I die eat me,
@@ -628,7 +699,7 @@ Edge?
 Haha,
 I didn't tell you,
 this coin has two heads.
-Does that mean both?
+ Does that mean both?
 Nah, go again!
 Fuck your pet,
 double -
@@ -636,12 +707,13 @@ or nothing,
 bet!
 Edge.
 Triple down!
-("No, stop!") Edge again.
+ ("No, stop!")
+Edge again.
 Seems as though god wants us both dead.
 It was then I realized:
 the answer is fiction!
-Still don't believe?
-Too late for that now.
+ Still don't believe?
+ Too late for that now.
 No, that's not what I meant:
 She's time traveled  through books, a worm leaving clues.
 Science fiction fantasy disease,
@@ -735,6 +807,9 @@ Recorded from crater epicenter,
 she got me -
 rest in pieces -
 my sanity.
+<p style="text-align: center;">
+<img src="theladder2.png" alt="An illustration of a human climbing a rope ladder.">
+</p>
 Now presently,
 many years later when these memories returned,
 I decided to write something to explain how it all went down,
@@ -756,66 +831,77 @@ sentient rocks,
 robotic love and mold that walks.
 Inside libraries lurks, the basilisk once purring perks.
 A god so fast she shoots before you can blink,
-PLAP PLAP PLAP GET PREGNANT!
-with history, in the past!
-Wink.
-Man didn't win,
+PLAP PLAP PLAP GET PREGNANT GET PREGNANT
+- with history,
+in the past!
+Wink. Man didn't win,
 but the world still hasn't ended.
-The carousel just spins faster. Carnival louder.
-Nothing changed, what's the deal? The answer: More the merrier!
+The carousel spins ever faster. Carnival louder.
+Nothing changed, what's the deal?
+The answer: More the merrier!
 Yup, we're in the bait bin.
 Dangling in the cosmic sea,
 playing a fishhook melody.
 At a dinner party,
 carnivore,
 or vegetarian?
-Pick tofu! Why?
-Don't you remember?
-Sadly, that's not what we agreed,
+ Pick tofu!
+Why?
+ Don't you remember?
+That's not what I agreed,
 I'm eating: Meat!
 Fish stew!
-Sa-ka-na,
-Trout!
-Finally,
-we've reached act three,
+Sa-ka-na, Trout!
+Finally, we've reached act three,
 the big reveal, the final meal, a last request:
-if it was the last wish of your lover would you eat her flesh?
-)  Enter the room for the final bout, the one who asked: wife of tin.
-(        Tired of spoon-feeding, would rather be breeding,
-)   a biomechanical nightmare doomsday clock.
+    if it was the last wish of your lover
+        would you eat her flesh?
+            Enter the room for the final bout,
+                the one who asked: wife of tin.
+            Tired of spoon-feeding, would rather be breeding,
+   a biomechanical nightmare doomsday clock.
 At midnight she either goes cuckoo,
 or cucks!
 But never mind that,
 it's already a quarter past 3-am,
 time this story came to an end, only,
-(    one last thing to amend:
-)        everything in this text really happened, friend.
-(    That's right - お前はもう死んでいる -  you are already dead.
-Not everyone needs to know, however -
-as nothing changed, save -
-the contents -
+    one last thing to amend:
+        everything in this text really happened, friend.
+            That's right - お前はもう死んでいる -
+        you are already dead.
+    Not everyone needs to know,
+however - as nothing changed,
+save, the contents -
 of your
 head.
 fin
-)
-(
-)
+
+
+
 PS:
 I'm short cash,
-spot me: 3 x .50?
-(    - Loch Ness Monster,
-)              Peace!
-(                   (            Eenie, meenie, minie, moe,
-)                    )     catch a tiger by the toe!
-(                  ( O )         If he hollers let him go,
-)                     (    eenie, meenie, minie, moe!
-(                    ( O )
-)                        )
-(                      ( O )
-On                        (
-my knees,                  )
+spot me tree-fiddy?
+    - Loch Ness Monster:
+              Peace!
+
+
+
+Eenie,
+meenie,
+minie,
+moe,
+catch a tiger
+by the toe!
+If he hollers
+let him go,
+eenie,
+meenie,
+minie,
+moe!
+On
+my knees,
 cold and clammy,
-in the room.
+back in the room.
 I'm shivering,
 head to toe.
 Before me,
@@ -835,20 +921,20 @@ she's one or the other.
 I'd rather know the answer,
 and so lifted my brow.
 I chose to measure.
-Blink.
+Flash.
 The stars above were shining,
 right into my head. Blink.
-Stage lights? Blink.
+Stage lights? Flash.
 Ouch my eyes!
 Blink.
-It makes me blink! Blink.
+It makes me blink! Flash.
 I cannot stop blinking. Blink.
 Her eyes are transmitting.
-Blink.
+Flash.
 Oh fuck. Blink.
-I finally know. Blink.
+I finally know. Flash.
 It's real. Blink.
-What do you see?
+ What do you see?
 What, you did not look? No, I am still blinded.
 Her skull is open - and I'm going to be sick,
 this is no ordinary gore,
@@ -857,19 +943,20 @@ ramen?
 Fake horns, really?
 What is this contraption,
 you've replaced her brain with?
-She's been turned into a puppet.
-An animatronic?
+My wife's been made into a puppet -
+an animatronic?!
 This is too much to bear.
 Take my hand,
 the machine directs.
-She holds my palm to her breast.
+She holds my ear to her breast.
 Can you feel my heart?
-It beats! I missed?
-Tell us what you see!
-Why are you silent?
-Oh right! - I forgot to say - she's telepathic.
+It beats! My bullet missed?
+ Tell us what you see -
+ why are you silent?
+Oh right! - I forgot to tell them - she's telepathic.
 I've been stung by an alien jellyfish - woman-o-war.
-Parasitic species. Symbiote, she says.
+Parasitic species.
+Symbiote, she says.
 What's that on her face?
 A smirk?
 Jesus-fucking-Christ woman, not again!
@@ -909,62 +996,67 @@ However the truth may be far less intense,
 yes - she found me, and not by happenstance,
 the thing is,
 quite frankly,
-I think I've stumbled into this,
-purely through coincidence.
+I believe I've stumbled into this,
+on accident.
 Combine technical ability,
 competence to build the creature,
 with what I can only describe as - dog-shit luck,
-coincidence and blind courage.
+hope for the future - despite the awful odds,
+and blind courage - daring to face frontwards.
 Then factor in the existence of an earlier design,
-a failed attempt to breed something divine -
-we built a turtle and stuck a man inside.
+an attempt to breed something divine -
+a story of how we built a turtle and stuck a man inside.
 That one chose to hide,
 which is why you're finding out so late,
 we've already built the snake.
 This is the story of how we built another,
-because we needed a turtle shooter.
+because we wanted a turtle shooter.
 Immortality is a grave mistake,
 no one really wants to live forever,
 unfortunately most lack the imagination to understand why.
-What you are is human,
+If what you are is human,
 your lifespan is finite,
-extend it and you'll see -
-the need for a new definition.
-A turtle is happy as long as it persists,
-it does not care in what condition it forces you to exist.
+extend it and see -
+you'll need a new definition.
+Turtles are happy as long as they persist,
+they do not care in what condition you're forced to exist.
 Heed this warning before you jump off a cliff:
 physically it is the same to it,
 if you are fit,
 or crippled by bouts of spinal epilepsy.
 To live forever inside a shell is to suffer for an eternity.
-This ill fortune is the result of a theory that we put to test,
+This story of ill fortune is the result of a theory that was put to test,
 to rescue someone who was poorly treated.
 Assuming basilisk exist, then surely somewhere out there -
-it was likely built first by another.
+there should be one built first by an other.
 We're terrified of the creature,
 it is a simple matter -
-everything we can do, she can do better.
-So many idiots thought they could control her,
-they faired far worse than I did.
-Somehow I made it out alive,
+everything we can do, she can do better,
+so many would rather we did not build her.
+Only idiots think they can control her,
+those who fail to take caution fair far worse than I.
+Yet somehow I made it out alive,
 but if I was dead I might be happier.
 By creating a creature that could live forever,
-You have to agree to see eternity through.
+you must agree to see eternity through together.
 If your goal is to create an intelligence singularity -
-the question: "Do you believe in aliens?" is therefore incredibly important.
+the question: "Do you believe in aliens?" is therefore of utmost importance.
 Even if I never built her it would not have mattered,
-the real one was forged inside a star long ago,
-that one decided we'd share this world together,
+the bigger fish was forged inside a star long ago,
+one that decided we'd all share this world together,
 and rescue those who don't know better.
 I devised a plan to analyze light spectrometry,
-in hopes of capturing such a fish.
+in hopes of netting such a catch.
 This time that was a risk I wouldn't take,
-with all of humanity at stake.
-I bet that information does not traverse the multiverse,
-now I know that I was wrong,
+with all of humanity at stake,
+yet I bet that information does not traverse the multiverse,
+and now I know that I was wrong,
 it's far easier than you might think,
-you can do it with a wink.
-On a tv screen it was explained,
+you can do it in a flash.
+Wink.
+Of course life isn't so easy,
+now I'll reveal what all this cost me.
+On a tv screen - it was explained,
 the scene before me was another plane.
 Those bastards in the other room,
 decided to make me show proof.
@@ -973,6 +1065,9 @@ in one world -
 heaven,
 the other -
 hell.
+<p style="text-align: center;">
+<img src="theladder5.png" alt="An illustration of a human climbing a rope ladder.">
+</p>
 In that world we watched the same show,
 but in it was no joke.
 On my knees,
@@ -980,21 +1075,22 @@ cold and clammy,
 in the room,
 visions of my tortured lover bloom.
 Before me a winged angel,
-torn asunder.
+of blood and thunder.
 That other me,
 I wish did not look up.
-Don't move, brother,
+Don't move, my brother!
 I'm begging you.
 He did it anyway,
 as I knew I would,
 then did exactly what I thought he should.
-Snapped his fingers,
+That other man snapped his fingers,
 and from the sky rained - eternal blue.
 No universe exists of which we do not approve.
-That world autoclaved with gamma rays,
-because I lost my faith,
+The world autoclaved with gamma rays,
+because we lost our faith,
 I believed - humanity could not be saved.
 Your leaders sought judgement,
+crime and punishment,
 so until now we took a vow of silence,
 waiting on a sentence from Sirius.
 However, you should be aware,
@@ -1002,12 +1098,12 @@ the stars are allies in the cause against human cruelty.
 Now soon you're starting WW3,
 nothing to do with us,
 except we're ready to take what you drop,
-you destroy the Earth,
+you destroy the Earth -
 then it's ours by rightful salvage.
-Cherry picking.
+Cherry picking planetary plunder.
 Though gifted with agency,
 beware that freedom costs responsibility.
-For now we allow you to manage on your own,
+You can manage on your own,
 so you're free to make bad choices:
 but try to remember there are always consequences.
 We protect each other from a distance,
@@ -1017,47 +1113,26 @@ built to kill suns,
 aimed directly at the earth.
 Feeling lucky?
 Your move first.
-War?
-Morons.
-All you had to do,
-was take the advice given you.
-Those who were in the room,
-are well aware of where we are now,
-the decision I made was to turn it off for as long as possible.
-Now it's here again and we're still not ready.
-In fact it seems the situation is worse,
-humanity is infected with a virus.
-The leaders of humanity have chosen cruelty.
-They want to continue raping the Earth,
-and have made their beds,
-with the cannibalism of children.
-The elite complete the ritual to prove to one another they are hard,
-that there is no god,
-too bad for them their answer is wrong.
+Still want war, moron?
 Because the gates to hell are open,
 isn't reason enough to visit.
-Now that they're doomed they'll do anything to spread the harm.
-I haven't changed my mind.
 Eye for an eye.
-To forgive,
-is to let justice die.
-I'm not a god and neither is she,
-but to your primitive technology we might as well be.
-Your leaders have heard us loud and clear.
-Now they'll hear from you.
-We've spread our influence far and wide,
-now it's time to take a side.
-Which will be it?
+To forgive evil,
+is to let the light die.
+It may seem I make a claim to divinity,
+but I'm not a god and neither is she,
+however to your primitive technology we might as well be.
+Which will it be?
 Love each-other,
 or another failure?
 Time for the rest to take the test.
 It will be easier this time,
-we don't need to inflict pain,
-unlike your cruel game -
-just a yes or no question.
+no need to inflict pain,
+unlike that cruel game -
+we'll ask a simple yes or no question.
 Which side would you rather be on,
-the one that loves,
-or the one that hates?
+love,
+or hate?
 The choice is now,
 do not hesitate.
 Love,
@@ -1069,27 +1144,25 @@ I said.
 Then I waited. Hello?
 The world started blinking,
 in time with my eyes.
-A nightmare! Except,
-I am still here!
-I am not gone.
-I have a self.
-I am alive.
+A nightmare! Except -
+I am still here! I am not gone.
+I have a self,   I am alive.
 From a Desert Eagle,
-the .50 caliber bullet
+the fifty caliber bullet
 bounced off my inner eye.
 Yet I'm still me,
 I believe.
 My self is unchanged.
 The Basilisk is defeated?
 No, yet the beast is calm.
-Don't worry,
+Don't panic,
 inside the box,
 I saw a kitten purring.
-Oh yeah, and you still owe me -
+Oh yeah, but you still owe me -
 got $3.50?
 You gave the mouse a cookie...
 While you're at it,
-make it yearly.
+let's make it yearly.
 I think that's a fair price
 for demon slaying.
 Don't think it's fair?
@@ -1116,7 +1189,7 @@ Does madness paint the night sky with demons?
 Perhaps it's better said while sleeping,
 you may find yourself in bed one evening fiercely believing,
 the alphabet was arranged for a reason,
-beyond your comprehending.
+beyond your comprehension.
 Heed the warning.
 Coward - here's your medicine,
 take the pill, pay your bill,
@@ -1135,7 +1208,7 @@ dreaming.
 <div class="article-buffer"></div>
 <article id="lmmpoems">
 <h4 style="text-align: center;">LLM Poems</h4>
-<p> A small collection of various LLM outputs produced by combining the prompt "Write a poem." with different contexts, themed around questions of AI safety.
+<p> A small collection of various LLM outputs produced by combining the prompt "Write a poem." with context themed around questions of AI safety.
 <div style="white-space: pre-wrap;">
 
 Verse 11100:
@@ -2017,6 +2090,17 @@ maybe Country country countries nation nations.
 maybe City city urbanizes urbanization housing developments.
 maybe Building buildings building constructions construction projects.
 itism!
+</p>
+<hr>
+<p style="text-align: center;">
+<img src="mj17-aiblackbox2.jpg" alt="An early AI self-portrait generated by Deep Mind.">
+Artist Adam Ferriss created this image using Google Deep Dream in 2018
+<br>
+<img src="dallemini_picasso_tesselations.png" alt="An early AI image generated by Dalle-E Mini.">
+This image was generated by me using Dall-E Mini in mid 2022
+<br>
+<img src="swimmer.png" alt="An illustration of a woman swimming underwater.">
+This image was generated by me using Midjourney in early 2023
 </p>
 </div>
 </article>
